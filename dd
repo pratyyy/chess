@@ -1,0 +1,271 @@
+g++ -o chess -g game.cpp imageloader.cpp draw.cpp mat_matr.cpp mat_vect.cpp load_bmp.cpp object.cpp load_3ds.cpp -framework GLUT -framework OpenGL -pthread -lm
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:140:2: warning: 'gluPickMatrix' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        gluPickMatrix(cursorX,viewport[3]-cursorY,5,5,viewport);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:279:13: note: 'gluPickMatrix' has been explicitly marked deprecated here
+extern void gluPickMatrix (GLdouble x, GLdouble y, GLdouble delX, GLdouble delY, GLint *viewport) OPENGL_DEPRECATED(10_0, 10_9);
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:142:2: warning: 'gluPerspective' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakePerspective" [-Wdeprecated-declarations]
+        gluPerspective(45,ratio,0.1,1000);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:278:13: note: 'gluPerspective' has been explicitly marked deprecated here
+extern void gluPerspective (GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakePerspective");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:273:5: warning: 'gluPerspective' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakePerspective" [-Wdeprecated-declarations]
+    gluPerspective(45.0f,(GLfloat)screen_width/(GLfloat)screen_height,1.0f,10000.0f); // We define the "viewing volume"
+    ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:278:13: note: 'gluPerspective' has been explicitly marked deprecated here
+extern void gluPerspective (GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakePerspective");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:274:5: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+    gluLookAt(xeye, yeye, zeye, xlook, ylook, zlook, 0,1,0);
+    ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:337:5: warning: 'gluPerspective' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakePerspective" [-Wdeprecated-declarations]
+    gluPerspective(45.0f,(GLfloat)screen_width/(GLfloat)screen_height,5.0f,10000.0f);
+    ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:278:13: note: 'gluPerspective' has been explicitly marked deprecated here
+extern void gluPerspective (GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakePerspective");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:339:5: warning: 'glutPostRedisplay' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+    glutPostRedisplay (); // This command redraw the scene (it calls the same routine of glutDisplayFunc)
+    ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:444:22: note: 'glutPostRedisplay' has been explicitly marked deprecated here
+extern void APIENTRY glutPostRedisplay(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:586:3: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+                gluLookAt(xeye+alpha, -3.0, zeye, xlook, ylook, zlook, 0,1,0);
+                ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:591:5: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+                                gluLookAt(xeye+alpha, yeye, zeye, xlook, ylook, zlook, 0,1,0);
+                                ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:593:5: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+                                gluLookAt(bxeye+alpha, byeye, bzeye, bxlook, bylook, bzlook, 0,1,0);
+                                ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:595:4: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+                        gluLookAt(bxeye+alpha, byeye, bzeye, bxlook, bylook, bzlook, 0,1,0);
+                        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:656:3: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+                gluLookAt(xeye+alpha, -3.0, zeye, xlook, ylook, zlook, 0,1,0);
+                ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:682:2: warning: 'glutSwapBuffers' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutSwapBuffers();
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:448:22: note: 'glutSwapBuffers' has been explicitly marked deprecated here
+extern void APIENTRY glutSwapBuffers(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:725:2: warning: 'glutTimerFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutTimerFunc(5, update, 0);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:752:6: warning: 'glutInitDisplayMode' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:432:22: note: 'glutInitDisplayMode' has been explicitly marked deprecated here
+extern void APIENTRY glutInitDisplayMode(unsigned int mode) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:753:6: warning: 'glutInitWindowSize' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutInitWindowSize(screen_width,screen_height);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:437:22: note: 'glutInitWindowSize' has been explicitly marked deprecated here
+extern void APIENTRY glutInitWindowSize(int width, int height) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:754:6: warning: 'glutInitWindowPosition' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutInitWindowPosition(0,0);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:436:22: note: 'glutInitWindowPosition' has been explicitly marked deprecated here
+extern void APIENTRY glutInitWindowPosition(int x, int y) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:756:19: warning: 'glutCreateWindow' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        mainwindow = glutCreateWindow("Chess 1.0");    
+                     ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:441:21: note: 'glutCreateWindow' has been explicitly marked deprecated here
+extern int APIENTRY glutCreateWindow(const char *title) OPENGL_DEPRECATED(10_0, 10_9);
+                    ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:758:2: warning: 'glutDisplayFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutDisplayFunc(Drawscene);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:505:22: note: 'glutDisplayFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutDisplayFunc(void (*func)(void)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:760:6: warning: 'glutIdleFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutIdleFunc(Drawscene);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:513:22: note: 'glutIdleFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutIdleFunc(void (*func)(void)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:762:6: warning: 'glutReshapeFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutReshapeFunc (resize);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:506:22: note: 'glutReshapeFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutReshapeFunc(void (*func)(int width, int height)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:764:6: warning: 'glutKeyboardFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutKeyboardFunc (keyboard);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:507:22: note: 'glutKeyboardFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutKeyboardFunc(void (*func)(unsigned char key, int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:765:3: warning: 'glutSpecialFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutSpecialFunc (keyboard_s);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:517:22: note: 'glutSpecialFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutSpecialFunc(void (*func)(int key, int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:766:2: warning: 'glutMouseFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutMouseFunc(mouseStuff);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:508:22: note: 'glutMouseFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutMouseFunc(void (*func)(int button, int state, int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:767:2: warning: 'glutPassiveMotionFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutPassiveMotionFunc(mouse_move_CB);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:510:22: note: 'glutPassiveMotionFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutPassiveMotionFunc(void (*func)(int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:768:2: warning: 'glutTimerFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutTimerFunc(5,update, 1);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:769:2: warning: 'glutPassiveMotionFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutPassiveMotionFunc(mouse_move_CB);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:510:22: note: 'glutPassiveMotionFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutPassiveMotionFunc(void (*func)(int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:772:6: warning: 'glutMainLoop' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutMainLoop();
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:438:22: note: 'glutMainLoop' has been explicitly marked deprecated here
+extern void APIENTRY glutMainLoop(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+game.cpp:112:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+game.cpp:118:2: warning: 'glutInit' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutInit(&argc, argv); 
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:431:22: note: 'glutInit' has been explicitly marked deprecated here
+extern void APIENTRY glutInit(int *argcp, char **argv) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+game.cpp:125:43: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        pid1=pthread_create(&thread1,NULL,func1, (void*)t);
+                                                 ^
+game.cpp:132:42: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        pid2=pthread_create(&thread2,NULL,func2,(void*)t);
+                                                ^
+31 warnings generated.
+draw.cpp:183:2: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+        gluLookAt(0,0,13.5, 0,-6.8,-1, 0,1,0);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+draw.cpp:208:2: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+        gluLookAt(0,0,13.5, 0,-6.8,-1, 0,1,0);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+draw.cpp:235:2: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+        gluLookAt(0,0,13.5, 0,-6.8,-1, 0,1,0);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+draw.cpp:262:2: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+        gluLookAt(0,0,13.5, 0,-6.8,-1, 0,1,0);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+draw.cpp:288:2: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+        gluLookAt(0,0,13.5, 0,-6.8,-1, 0,1,0);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+5 warnings generated.
+load_bmp.cpp:133:5: warning: 'gluBuild2DMipmaps' is deprecated: first deprecated in OS X 10.9 - "Use glGenerateMipmap" [-Wdeprecated-declarations]
+    gluBuild2DMipmaps(GL_TEXTURE_2D, 3, infoheader.biWidth, infoheader.biHeight, GL_RGB, GL_UNSIGNED_BYTE, infoheader.data);
+    ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:247:14: note: 'gluBuild2DMipmaps' has been explicitly marked deprecated here
+extern GLint gluBuild2DMipmaps (GLenum target, GLint internalFormat, GLsizei width, GLsizei height, GLenum format, GLenum type, const void *data) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use glGenerateMipmap");
+             ^
+1 warning generated.

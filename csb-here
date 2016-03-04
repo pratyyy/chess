@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "removing old cscope.file"
+#rm cscope.files > /dev/null
+rm cscope_files 2> /dev/null
+echo "creating new cscope.file using find"
+find *.[hc] *.cpp > cscope.files
+echo "creating tags..."
+/usr/local/bin/ctags `cat cscope.files`
+echo "opening cscope..."
+# . ~/.theme
+cscope -p 4 -i cscope.files

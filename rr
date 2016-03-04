@@ -1,0 +1,669 @@
+gcc -o chess game.cpp imageloader.cpp draw.cpp mat_matr.cpp mat_vect.cpp load_bmp.cpp object.cpp load_3ds.cpp -framework GLUT -framework OpenGL -pthread -lm
+In file included from game.cpp:1:
+./chess.cpp:231:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+In file included from game.cpp:2:
+./movegen.cpp:269:18: warning: variable 'pawnmoves' is uninitialized when used within its own initialization [-Wuninitialized]
+ U64 pawnmoves = pawnmoves | (bitboard.Pawnsmove[sq][side] & bitboard.unoccupiedboard[side]);
+     ~~~~~~~~~   ^~~~~~~~~
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:141:2: warning: 'gluPickMatrix' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        gluPickMatrix(cursorX,viewport[3]-cursorY,5,5,viewport);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:279:13: note: 'gluPickMatrix' has been explicitly marked deprecated here
+extern void gluPickMatrix (GLdouble x, GLdouble y, GLdouble delX, GLdouble delY, GLint *viewport) OPENGL_DEPRECATED(10_0, 10_9);
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:143:2: warning: 'gluPerspective' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakePerspective" [-Wdeprecated-declarations]
+        gluPerspective(45,ratio,0.1,1000);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:278:13: note: 'gluPerspective' has been explicitly marked deprecated here
+extern void gluPerspective (GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakePerspective");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:274:5: warning: 'gluPerspective' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakePerspective" [-Wdeprecated-declarations]
+    gluPerspective(45.0f,(GLfloat)screen_width/(GLfloat)screen_height,1.0f,10000.0f); // We define the "viewing volume"
+    ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:278:13: note: 'gluPerspective' has been explicitly marked deprecated here
+extern void gluPerspective (GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakePerspective");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:275:5: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+    gluLookAt(xeye, yeye, zeye, xlook, ylook, zlook, 0,1,0);
+    ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:279:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/rook.3ds","texture/images/skull.bmp",             4.55, -4.5, -5.95,    0,0,0);
+                 ^
+./main.cpp:279:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/rook.3ds","texture/images/skull.bmp",             4.55, -4.5, -5.95,    0,0,0);
+                                        ^
+./main.cpp:280:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/knight.3ds","texture/images/skull.bmp",             3.25, -4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:280:36: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/knight.3ds","texture/images/skull.bmp",             3.25, -4.5, -6.275,    0,0,0);
+                                          ^
+./main.cpp:281:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/bishop.3ds","texture/images/skull.bmp",             1.95, -4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:281:36: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/bishop.3ds","texture/images/skull.bmp",             1.95, -4.5, -6.275,    0,0,0);
+                                          ^
+./main.cpp:282:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/king.3ds","texture/images/skull.bmp",             0.65, -4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:282:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/king.3ds","texture/images/skull.bmp",             0.65, -4.5, -6.275,    0,0,0);
+                                        ^
+./main.cpp:283:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/queen.3ds","texture/images/skull.bmp",             -0.65, -4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:283:35: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/queen.3ds","texture/images/skull.bmp",             -0.65, -4.5, -6.275,    0,0,0);
+                                         ^
+./main.cpp:284:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/bishop.3ds","texture/images/skull.bmp",             -1.95, -4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:284:36: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/bishop.3ds","texture/images/skull.bmp",             -1.95, -4.5, -6.275,    0,0,0);
+                                          ^
+./main.cpp:285:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/knight.3ds","texture/images/skull.bmp",             -3.25, -4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:285:36: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/knight.3ds","texture/images/skull.bmp",             -3.25, -4.5, -6.275,    0,0,0);
+                                          ^
+./main.cpp:286:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/rook.3ds","texture/images/skull.bmp",             -4.55, -4.5, -5.95,    0,0,0);
+                 ^
+./main.cpp:286:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/rook.3ds","texture/images/skull.bmp",             -4.55, -4.5, -5.95,    0,0,0);
+                                        ^
+./main.cpp:287:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             4.55, -3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:287:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             4.55, -3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:288:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             3.25, -3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:288:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             3.25, -3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:289:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             1.95, -3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:289:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             1.95, -3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:290:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             0.65, -3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:290:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             0.65, -3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:291:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             -0.65, -3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:291:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             -0.65, -3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:292:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             -1.95, -3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:292:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             -1.95, -3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:293:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             -3.25, -3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:293:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             -3.25, -3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:294:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             -4.55, -3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:294:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/skull.bmp",             -4.55, -3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:296:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             4.55, 3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:296:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             4.55, 3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:297:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             3.25, 3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:297:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             3.25, 3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:298:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             1.95, 3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:298:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             1.95, 3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:299:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             0.65, 3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:299:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             0.65, 3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:300:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             -0.65, 3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:300:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             -0.65, 3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:301:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             -1.95, 3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:301:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             -1.95, 3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:302:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             -3.25, 3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:302:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             -3.25, 3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:303:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             -4.55, 3.25, -6.28,    0,0,0);
+                 ^
+./main.cpp:303:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/pawn.3ds","texture/images/water.bmp",             -4.55, 3.25, -6.28,    0,0,0);
+                                        ^
+./main.cpp:304:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/rook.3ds","texture/images/water.bmp",             4.55, 4.5, -5.95,    0,0,0);
+                 ^
+./main.cpp:304:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/rook.3ds","texture/images/water.bmp",             4.55, 4.5, -5.95,    0,0,0);
+                                        ^
+./main.cpp:305:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/knight.3ds","texture/images/water.bmp",             3.25, 4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:305:36: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/knight.3ds","texture/images/water.bmp",             3.25, 4.5, -6.275,    0,0,0);
+                                          ^
+./main.cpp:306:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/bishop.3ds","texture/images/water.bmp",             1.95, 4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:306:36: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/bishop.3ds","texture/images/water.bmp",             1.95, 4.5, -6.275,    0,0,0);
+                                          ^
+./main.cpp:307:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/king.3ds","texture/images/water.bmp",             0.65, 4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:307:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/king.3ds","texture/images/water.bmp",             0.65, 4.5, -6.275,    0,0,0);
+                                        ^
+./main.cpp:308:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/queen.3ds","texture/images/water.bmp",             -0.65, 4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:308:35: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/queen.3ds","texture/images/water.bmp",             -0.65, 4.5, -6.275,    0,0,0);
+                                         ^
+./main.cpp:309:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/bishop.3ds","texture/images/water.bmp",             -1.95, 4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:309:36: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/bishop.3ds","texture/images/water.bmp",             -1.95, 4.5, -6.275,    0,0,0);
+                                          ^
+./main.cpp:310:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/knight.3ds","texture/images/water.bmp",             -3.25, 4.5, -6.275,    0,0,0);
+                 ^
+./main.cpp:310:36: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/knight.3ds","texture/images/water.bmp",             -3.25, 4.5, -6.275,    0,0,0);
+                                          ^
+./main.cpp:311:11: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/rook.3ds","texture/images/water.bmp",             -4.55, 4.5, -5.95,    0,0,0);
+                 ^
+./main.cpp:311:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        ObjLoad ("texture/set/rook.3ds","texture/images/water.bmp",             -4.55, 4.5, -5.95,    0,0,0);
+                                        ^
+./main.cpp:329:5: warning: 'gluPerspective' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakePerspective" [-Wdeprecated-declarations]
+    gluPerspective(45.0f,(GLfloat)screen_width/(GLfloat)screen_height,5.0f,10000.0f);
+    ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:278:13: note: 'gluPerspective' has been explicitly marked deprecated here
+extern void gluPerspective (GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakePerspective");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:331:5: warning: 'glutPostRedisplay' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+    glutPostRedisplay (); // This command redraw the scene (it calls the same routine of glutDisplayFunc)
+    ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:444:22: note: 'glutPostRedisplay' has been explicitly marked deprecated here
+extern void APIENTRY glutPostRedisplay(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:578:3: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+                gluLookAt(xeye+alpha, -3.0, zeye, xlook, ylook, zlook, 0,1,0);
+                ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:583:5: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+                                gluLookAt(xeye+alpha, yeye, zeye, xlook, ylook, zlook, 0,1,0);
+                                ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:585:5: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+                                gluLookAt(bxeye+alpha, byeye, bzeye, bxlook, bylook, bzlook, 0,1,0);
+                                ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:587:4: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+                        gluLookAt(bxeye+alpha, byeye, bzeye, bxlook, bylook, bzlook, 0,1,0);
+                        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:648:3: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+                gluLookAt(xeye+alpha, -3.0, zeye, xlook, ylook, zlook, 0,1,0);
+                ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:674:2: warning: 'glutSwapBuffers' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutSwapBuffers();
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:448:22: note: 'glutSwapBuffers' has been explicitly marked deprecated here
+extern void APIENTRY glutSwapBuffers(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:717:2: warning: 'glutTimerFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutTimerFunc(5, update, 0);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:744:6: warning: 'glutInitDisplayMode' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:432:22: note: 'glutInitDisplayMode' has been explicitly marked deprecated here
+extern void APIENTRY glutInitDisplayMode(unsigned int mode) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:745:6: warning: 'glutInitWindowSize' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutInitWindowSize(screen_width,screen_height);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:437:22: note: 'glutInitWindowSize' has been explicitly marked deprecated here
+extern void APIENTRY glutInitWindowSize(int width, int height) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:746:6: warning: 'glutInitWindowPosition' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutInitWindowPosition(0,0);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:436:22: note: 'glutInitWindowPosition' has been explicitly marked deprecated here
+extern void APIENTRY glutInitWindowPosition(int x, int y) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:748:19: warning: 'glutCreateWindow' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        mainwindow = glutCreateWindow("Chess 1.0");    
+                     ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:441:21: note: 'glutCreateWindow' has been explicitly marked deprecated here
+extern int APIENTRY glutCreateWindow(const char *title) OPENGL_DEPRECATED(10_0, 10_9);
+                    ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:750:2: warning: 'glutDisplayFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutDisplayFunc(Drawscene);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:505:22: note: 'glutDisplayFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutDisplayFunc(void (*func)(void)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:752:6: warning: 'glutIdleFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutIdleFunc(Drawscene);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:513:22: note: 'glutIdleFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutIdleFunc(void (*func)(void)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:754:6: warning: 'glutReshapeFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutReshapeFunc (resize);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:506:22: note: 'glutReshapeFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutReshapeFunc(void (*func)(int width, int height)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:756:6: warning: 'glutKeyboardFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutKeyboardFunc (keyboard);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:507:22: note: 'glutKeyboardFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutKeyboardFunc(void (*func)(unsigned char key, int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:757:3: warning: 'glutSpecialFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutSpecialFunc (keyboard_s);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:517:22: note: 'glutSpecialFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutSpecialFunc(void (*func)(int key, int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:758:2: warning: 'glutMouseFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutMouseFunc(mouseStuff);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:508:22: note: 'glutMouseFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutMouseFunc(void (*func)(int button, int state, int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:759:2: warning: 'glutPassiveMotionFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutPassiveMotionFunc(mouse_move_CB);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:510:22: note: 'glutPassiveMotionFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutPassiveMotionFunc(void (*func)(int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:760:2: warning: 'glutTimerFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutTimerFunc(5,update, 1);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:761:2: warning: 'glutPassiveMotionFunc' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutPassiveMotionFunc(mouse_move_CB);
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:510:22: note: 'glutPassiveMotionFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutPassiveMotionFunc(void (*func)(int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+In file included from ./ply.cpp:2:
+./main.cpp:764:6: warning: 'glutMainLoop' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutMainLoop();
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:438:22: note: 'glutMainLoop' has been explicitly marked deprecated here
+extern void APIENTRY glutMainLoop(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from game.cpp:4:
+./ply.cpp:18:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+game.cpp:112:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+game.cpp:118:2: warning: 'glutInit' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+        glutInit(&argc, argv); 
+        ^
+/System/Library/Frameworks/GLUT.framework/Headers/glut.h:431:22: note: 'glutInit' has been explicitly marked deprecated here
+extern void APIENTRY glutInit(int *argcp, char **argv) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+game.cpp:125:43: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        pid1=pthread_create(&thread1,NULL,func1, (void*)t);
+                                                 ^
+game.cpp:132:42: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        pid2=pthread_create(&thread2,NULL,func2,(void*)t);
+                                                ^
+98 warnings generated.
+draw.cpp:183:2: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+        gluLookAt(0,0,13.5, 0,-6.8,-1, 0,1,0);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+draw.cpp:208:2: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+        gluLookAt(0,0,13.5, 0,-6.8,-1, 0,1,0);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+draw.cpp:235:2: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+        gluLookAt(0,0,13.5, 0,-6.8,-1, 0,1,0);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+draw.cpp:262:2: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+        gluLookAt(0,0,13.5, 0,-6.8,-1, 0,1,0);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+draw.cpp:288:2: warning: 'gluLookAt' is deprecated: first deprecated in OS X 10.9 - "Use GLKMatrix4MakeLookAt" [-Wdeprecated-declarations]
+        gluLookAt(0,0,13.5, 0,-6.8,-1, 0,1,0);
+        ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:265:13: note: 'gluLookAt' has been explicitly marked deprecated here
+extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use GLKMatrix4MakeLookAt");
+            ^
+5 warnings generated.
+load_bmp.cpp:133:5: warning: 'gluBuild2DMipmaps' is deprecated: first deprecated in OS X 10.9 - "Use glGenerateMipmap" [-Wdeprecated-declarations]
+    gluBuild2DMipmaps(GL_TEXTURE_2D, 3, infoheader.biWidth, infoheader.biHeight, GL_RGB, GL_UNSIGNED_BYTE, infoheader.data);
+    ^
+/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:247:14: note: 'gluBuild2DMipmaps' has been explicitly marked deprecated here
+extern GLint gluBuild2DMipmaps (GLenum target, GLint internalFormat, GLsizei width, GLsizei height, GLenum format, GLenum type, const void *data) OPENGL_DEPRECATED_MSG(10_0, 10_9, "Use glGenerateMipmap");
+             ^
+1 warning generated.
+Undefined symbols for architecture x86_64:
+  "std::__1::locale::has_facet(std::__1::locale::id&) const", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in imageloader-2f89d0.o
+  "std::__1::locale::use_facet(std::__1::locale::id&) const", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::endl<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in game-3f32fb.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in game-3f32fb.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&) in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in imageloader-2f89d0.o
+  "std::__1::ios_base::getloc() const", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::endl<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in game-3f32fb.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in game-3f32fb.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)", referenced from:
+      initialise() in game-3f32fb.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(unsigned long, char)", referenced from:
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in game-3f32fb.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      initialise() in game-3f32fb.o
+      std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, int>::pair(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, int> const&) in game-3f32fb.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()", referenced from:
+      initialise() in game-3f32fb.o
+      func1(void*) in game-3f32fb.o
+      std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, int>::~pair() in game-3f32fb.o
+      std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>::~pair() in game-3f32fb.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in game-3f32fb.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::read(char*, long)", referenced from:
+      loadBMP(char const*) in imageloader-2f89d0.o
+      (anonymous namespace)::readInt(std::__1::basic_ifstream<char, std::__1::char_traits<char> >&) in imageloader-2f89d0.o
+      (anonymous namespace)::readShort(std::__1::basic_ifstream<char, std::__1::char_traits<char> >&) in imageloader-2f89d0.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::seekg(long long, std::__1::ios_base::seekdir)", referenced from:
+      loadBMP(char const*) in imageloader-2f89d0.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::ignore(long, int)", referenced from:
+      loadBMP(char const*) in imageloader-2f89d0.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      loadBMP(char const*) in imageloader-2f89d0.o
+      std::__1::basic_ifstream<char, std::__1::char_traits<char> >::~basic_ifstream() in imageloader-2f89d0.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::put(char)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::endl<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in game-3f32fb.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::flush()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::endl<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in game-3f32fb.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry::sentry(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in game-3f32fb.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry::~sentry()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in game-3f32fb.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(float)", referenced from:
+      keyboard(unsigned char, int, int) in game-3f32fb.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(int)", referenced from:
+      U64::display() in game-3f32fb.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::uflow()", referenced from:
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsgetn(char*, long)", referenced from:
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long)", referenced from:
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::showmanyc()", referenced from:
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::basic_streambuf()", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in imageloader-2f89d0.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::~basic_streambuf()", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::~basic_filebuf() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in imageloader-2f89d0.o
+  "std::__1::cout", referenced from:
+      U64::display() in game-3f32fb.o
+      keyboard(unsigned char, int, int) in game-3f32fb.o
+      choosebestmoveupdate(node*, int) in game-3f32fb.o
+      func1(void*) in game-3f32fb.o
+      _main in game-3f32fb.o
+  "std::__1::ctype<char>::id", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::endl<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in game-3f32fb.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in game-3f32fb.o
+  "std::__1::locale::locale(std::__1::locale const&)", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in imageloader-2f89d0.o
+  "std::__1::locale::~locale()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::endl<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in game-3f32fb.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in game-3f32fb.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in imageloader-2f89d0.o
+  "std::__1::codecvt<char, char, __mbstate_t>::id", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&) in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in imageloader-2f89d0.o
+  "std::__1::ios_base::__set_badbit_and_consider_rethrow()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in game-3f32fb.o
+  "std::__1::ios_base::init(void*)", referenced from:
+      loadBMP(char const*) in imageloader-2f89d0.o
+  "std::__1::ios_base::clear(unsigned int)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in game-3f32fb.o
+      loadBMP(char const*) in imageloader-2f89d0.o
+      std::__1::basic_ifstream<char, std::__1::char_traits<char> >::open(char const*, unsigned int) in imageloader-2f89d0.o
+  "std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios()", referenced from:
+      loadBMP(char const*) in imageloader-2f89d0.o
+      std::__1::basic_ifstream<char, std::__1::char_traits<char> >::~basic_ifstream() in imageloader-2f89d0.o
+  "std::bad_cast::bad_cast()", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int) in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::sync() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::underflow() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::overflow(int) in imageloader-2f89d0.o
+  "std::bad_cast::~bad_cast()", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int) in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::sync() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::underflow() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::overflow(int) in imageloader-2f89d0.o
+  "std::terminate()", referenced from:
+      ___clang_call_terminate in game-3f32fb.o
+      ___clang_call_terminate in imageloader-2f89d0.o
+  "typeinfo for std::__1::basic_istream<char, std::__1::char_traits<char> >", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+      typeinfo for std::__1::basic_ifstream<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  "typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >", referenced from:
+      typeinfo for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  "typeinfo for std::bad_cast", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int) in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::sync() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::underflow() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::overflow(int) in imageloader-2f89d0.o
+  "vtable for __cxxabiv1::__si_class_type_info", referenced from:
+      typeinfo for std::__1::basic_ifstream<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+      typeinfo for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for std::__1::ios_base", referenced from:
+      loadBMP(char const*) in imageloader-2f89d0.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for std::__1::basic_ios<char, std::__1::char_traits<char> >", referenced from:
+      loadBMP(char const*) in imageloader-2f89d0.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "non-virtual thunk to std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  "non-virtual thunk to std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in imageloader-2f89d0.o
+  "operator delete[](void*)", referenced from:
+      Image::~Image() in imageloader-2f89d0.o
+      (anonymous namespace)::auto_array<char>::~auto_array() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::~basic_filebuf() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&) in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::setbuf(char*, long) in imageloader-2f89d0.o
+  "operator delete(void*)", referenced from:
+      addMove(node*, int, int, int, int) in game-3f32fb.o
+      createroot(U64 (*) [7]) in game-3f32fb.o
+      minimax(node*, int) in game-3f32fb.o
+      std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::destroy(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, void*>*) in game-3f32fb.o
+      std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::__insert_unique(std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) in game-3f32fb.o
+      std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::__construct_node(std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) in game-3f32fb.o
+      loadBMP(char const*) in imageloader-2f89d0.o
+      ...
+  "operator new[](unsigned long)", referenced from:
+      loadBMP(char const*) in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&) in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::setbuf(char*, long) in imageloader-2f89d0.o
+  "operator new(unsigned long)", referenced from:
+      addMove(node*, int, int, int, int) in game-3f32fb.o
+      createroot(U64 (*) [7]) in game-3f32fb.o
+      minimax(node*, int) in game-3f32fb.o
+      std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::__construct_node(std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) in game-3f32fb.o
+      loadBMP(char const*) in imageloader-2f89d0.o
+  "___cxa_allocate_exception", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int) in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::sync() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::underflow() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::overflow(int) in imageloader-2f89d0.o
+  "___cxa_begin_catch", referenced from:
+      ___clang_call_terminate in game-3f32fb.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in game-3f32fb.o
+      ___clang_call_terminate in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::~basic_filebuf() in imageloader-2f89d0.o
+  "___cxa_call_unexpected", referenced from:
+      std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::destroy(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, void*>*) in game-3f32fb.o
+      std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::__insert_unique(std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) in game-3f32fb.o
+      std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::__find_equal<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) in game-3f32fb.o
+      std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::__construct_node(std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) in game-3f32fb.o
+      std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in game-3f32fb.o
+      std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, void*>*) in game-3f32fb.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::close() in imageloader-2f89d0.o
+      ...
+  "___cxa_end_catch", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in game-3f32fb.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::~basic_filebuf() in imageloader-2f89d0.o
+  "___cxa_throw", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int) in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::sync() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::underflow() in imageloader-2f89d0.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::overflow(int) in imageloader-2f89d0.o
+  "___gxx_personality_v0", referenced from:
+      initialise() in game-3f32fb.o
+      addMove(node*, int, int, int, int) in game-3f32fb.o
+      createroot(U64 (*) [7]) in game-3f32fb.o
+      minimax(node*, int) in game-3f32fb.o
+      func1(void*) in game-3f32fb.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::endl<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in game-3f32fb.o
+      std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> > >::destroy(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, void*>*) in game-3f32fb.o
+      ...
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [chess] Error 1

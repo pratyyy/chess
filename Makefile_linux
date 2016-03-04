@@ -1,0 +1,25 @@
+
+MAINSRC =game.cpp
+MAINLIB = -lglut -pthread
+
+SRC = $(MAINSRC) imageloader.cpp draw.cpp mat_matr.cpp mat_vect.cpp  load_bmp.cpp object.cpp load_3ds.cpp game.cpp   
+
+OBJ = $(SRC:.c=.o)
+
+OPT = -O3
+CC = gcc $(OPT) -Wall
+
+# You might have to change GLU to MesaGLU depending on your Mesa version
+GLLIBS = $(MAINLIB) -lGL -lGLU
+LIBS = $(GLLIBS) -lm
+
+all:chess
+
+.c.o:
+	$(CC) -c $<
+
+chess: $(OBJ)
+	gcc -o $@ $^ $(LIBS)
+
+clean:
+	rm -f chess *.o

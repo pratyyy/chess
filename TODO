@@ -1,0 +1,33 @@
+1. Port to mac.
+2. Reorg, clean up and comments.
+3. Rewrite in c for better perfomance ?
+4. Write summary of the algo
+5. Interface to run one version agianst another.
+6. Fix deprecated
+
+IM2104-X0:chess_src prateek.vaishnav$ cat dd  | grep "is deprecated" | awk '{print $3}' |  uniq
+'gluPickMatrix'
+'gluPerspective'
+'gluLookAt'
+'gluPerspective'
+'glutPostRedisplay'
+'gluLookAt'
+'glutSwapBuffers'
+'glutTimerFunc'
+'glutInitDisplayMode'
+'glutInitWindowSize'
+'glutInitWindowPosition'
+'glutCreateWindow'
+'glutDisplayFunc'
+'glutIdleFunc'
+'glutReshapeFunc'
+'glutKeyboardFunc'
+'glutSpecialFunc'
+'glutMouseFunc'
+'glutPassiveMotionFunc'
+'glutTimerFunc'
+'glutPassiveMotionFunc'
+'glutMainLoop'
+'glutInit'
+'gluLookAt'
+'gluBuild2DMipmaps'
